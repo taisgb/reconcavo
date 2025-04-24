@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Recôncavo Engenharia e Arquitetura | Soluções Inovadoras em Projetos</title>
+    <meta name="description" content="A Recôncavo Engenharia e Arquitetura oferece soluções inovadoras em projetos residenciais, comerciais e industriais com foco em qualidade e sustentabilidade.">
+    <meta name="keywords" content="engenharia, arquitetura, projetos, construção, salvador, bahia, recôncavo">
+    <meta name="author" content="Recôncavo Engenharia e Arquitetura">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.reconcavo.com.br/">
+    <meta property="og:title" content="Recôncavo Engenharia e Arquitetura | Soluções Inovadoras">
+    <meta property="og:description" content="Soluções inovadoras em engenharia e arquitetura para projetos residenciais, comerciais e industriais.">
+    <meta property="og:image" content="og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.reconcavo.com.br/">
+    <meta property="twitter:title" content="Recôncavo Engenharia e Arquitetura">
+    <meta property="twitter:description" content="Soluções inovadoras em engenharia e arquitetura para projetos residenciais, comerciais e industriais.">
+    <meta property="twitter:image" content="og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Preload de fontes e recursos críticos -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+      
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Recôncavo Engenharia e Arquitetura",
+      "url": "https://www.reconcavo.com.br",
+      "logo": "https://www.reconcavo.com.br/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-71-99214-3457",
+        "contactType": "customer service",
+        "availableLanguage": "Portuguese"
+      },
+      "sameAs": [
+        "https://www.facebook.com/reconcavoengenharia",
+        "https://www.instagram.com/reconcavoengenharia",
+        "https://www.linkedin.com/company/reconcavoengenharia"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./img/logo/logo.webp" alt="Recôncavo Engenharia e Arquitetura">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+                <div class="menu-mobile">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Entre em Contato</h1>
+            <p>Estamos prontos para atender você</p>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Endereço</h3>
+                    <p>Rua Ilhéus, 131</p>
+                    <p>Rio Vermelho - Salvador/BA</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefone</h3>
+                    <p>(71) 99214-3457</p>
+                    <p>(71) 99363-8809</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>E-mail</h3>
+                    <p>atendimento@reconcavoea.com.br</p>                    
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Horário</h3>
+                    <p>Segunda a Sexta: <br>8:30 às 17:30</p>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="form-container">
+                    <h2>Envie uma mensagem</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="orcamento">Orçamento</option>
+                                <option value="projeto">Projeto</option>
+                                <option value="consultoria">Consultoria</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn">Enviar mensagem</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="map-container">
+                    <h2>Nossa localização</h2>
+                    <div class="map">                       
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.4035391200623!2d-38.49337792492285!3d-13.00995478730891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7160356ad12f1a5%3A0x78d0ef5c3042b7cf!2sR.%20Ilh%C3%A9us%2C%20131%20-%20Rio%20Vermelho%2C%20Salvador%20-%20BA%2C%2041940-570!5e0!3m2!1spt-BR!2sbr!4v1745361052159!5m2!1spt-BR!2sbr"width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./img/logo/logo.webp" alt="Recôncavo Engenharia e Arquitetura">
+                    <p>Soluções inovadoras em engenharia e arquitetura</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua Ilhéus, nº131, Rio Vermelho, Salvador/BA</p>
+                    <p><i class="fas fa-phone"></i> (71) 99214-3457</p>
+                    <p><i class="fas fa-phone"></i> (71) 99363-8809</p>
+                    <p><i class="fas fa-envelope"></i>atendimento@reconcavoea.com.br</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-icons">                        
+                        <a href="https://www.instagram.com/reconcavo.ea"><i class="fab fa-instagram"></i></a>
+                        <a href="https://br.linkedin.com/company/rec%C3%B4ncavo-engenharia-e-arquitetura-ltda"><i class="fab fa-linkedin-in"></i></a>
+                        <a href=""><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Recôncavo Engenharia e Arquitetura. Todos os direitos reservados.</p>
+                <p style="font-size: x-small;">Desenvolvido por <a href="https://www.taisgb.com.br/"></a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/global.js"></script>
+    <script src="./js/script-contato.js"></script>
+
+</body>
+</html>

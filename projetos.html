@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Recôncavo Engenharia e Arquitetura | Soluções Inovadoras em Projetos</title>
+    <meta name="description" content="A Recôncavo Engenharia e Arquitetura oferece soluções inovadoras em projetos residenciais, comerciais e industriais com foco em qualidade e sustentabilidade.">
+    <meta name="keywords" content="engenharia, arquitetura, projetos, construção, salvador, bahia, recôncavo">
+    <meta name="author" content="Recôncavo Engenharia e Arquitetura">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.reconcavo.com.br/">
+    <meta property="og:title" content="Recôncavo Engenharia e Arquitetura | Soluções Inovadoras">
+    <meta property="og:description" content="Soluções inovadoras em engenharia e arquitetura para projetos residenciais, comerciais e industriais.">
+    <meta property="og:image" content="og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.reconcavo.com.br/">
+    <meta property="twitter:title" content="Recôncavo Engenharia e Arquitetura">
+    <meta property="twitter:description" content="Soluções inovadoras em engenharia e arquitetura para projetos residenciais, comerciais e industriais.">
+    <meta property="twitter:image" content="og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Preload de fontes e recursos críticos -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+      
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Recôncavo Engenharia e Arquitetura",
+      "url": "https://www.reconcavo.com.br",
+      "logo": "https://www.reconcavo.com.br/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-71-99214-3457",
+        "contactType": "customer service",
+        "availableLanguage": "Portuguese"
+      },
+      "sameAs": [
+        "https://www.facebook.com/reconcavoengenharia",
+        "https://www.instagram.com/reconcavoengenharia",
+        "https://www.linkedin.com/company/reconcavoengenharia"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./img/logo/logo.webp" alt="Recôncavo Engenharia e Arquitetura">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html" class="active">Projetos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <div class="menu-mobile">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Nossos Projetos</h1>
+            <p>Conheça nosso portfólio de trabalhos realizados</p>
+        </div>
+    </section>
+
+    <section class="projects-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="residencial">Residencial</button>
+                <button class="filter-btn" data-filter="institucional">Institucional/Administrativo</button>
+                <button class="filter-btn" data-filter="hotelaria">Hotelaria</button>  
+                <button class="filter-btn" data-filter="urbanismo">Urbanismo</button>    
+                <button class="filter-btn" data-filter="esportes">Esportes</button>    
+                <button class="filter-btn" data-filter="lazer">Cultura/Lazer</button>
+                <button class="filter-btn" data-filter="paisagismo">Paisagismo</button>    
+                <button class="filter-btn" data-filter="clinica">Clínicas/Saúde</button>
+                <button class="filter-btn" data-filter="educacional">Educacional</button>                      
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="projects-gallery">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Projeto 1 -->
+                <div class="project-item" data-category="institucional educacional" id="projeto1">
+                    <div class="project-image">                        
+                        <img src="./img/projetos/sesi/capa-sesi.webp" alt="SESI" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Reforma SESI</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto1">Ver detalhes</button>                                
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 2 -->
+                <div class="project-item" data-category="esportes lazer" id="projeto2">
+                    <div class="project-image">
+                        <img src="./img/projetos/araraquara/capa.webp" alt="Ginásio Araraquara" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Prefeitura de Araraquara-SP</h3>
+                            <p>Obra Pública</p>
+                            <button class="view-project" data-id="projeto2">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 3 -->
+                <div class="project-item" data-category="educacional esportes" id="projeto3">
+                    <div class="project-image">
+                        <img src="./img/projetos/sesc_colatina/capa.webp" alt="SESC Colatina/ES" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>SESC Colatina/ES</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto3">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 4 -->
+                <div class="project-item" data-category="institucional">
+                    <div class="project-image">
+                        <img src="./img/projetos/De_Oiapoque/capa.webp" alt="Design de Interiores" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Delegacia da Polícia Federal – Oiapoque/AP</h3>
+                            <p>Obra Pública</p>
+                            <button class="view-project" data-id="projeto4">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 5 -->
+                <div class="project-item" data-category="institucional">
+                    <div class="project-image">
+                        <img src="./img/projetos/buritis/capa.webp" alt="Câmara Municipal de Buritis – MG" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Câmara Municipal de Buritis – MG</h3>
+                            <p>Obra Pública</p>
+                            <button class="view-project" data-id="projeto5">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 6 -->
+                <div class="project-item" data-category="institucional">
+                    <div class="project-image">
+                        <img src="./img/projetos/cremeb/capa.webp" alt="CREMEB – Delegacias Regionais" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>CREMEB – Delegacias Regionais</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto6">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 7 -->
+                <div class="project-item" data-category="institucional" id="projeto7">
+                    <div class="project-image">
+                        <img src="./img/projetos/senar_sede/capa.webp" alt="SENAR/GO – Sede" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>SENAR/GO – Sede</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto7">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 8 -->
+                <div class="project-item" data-category="institucional" id="projeto8">
+                    <div class="project-image">
+                        <img src="./img/projetos/tr/capa.webp" alt="TRF1/BA – Justiça Federal" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>TRF1/BA – Justiça Federal</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto8">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 9 -->
+                <div class="project-item" data-category="institucional" id="projeto9">
+                    <div class="project-image">
+                        <img src="./img/projetos/sisprev/capa.webp" alt="Sisprev – Teófilo Otoni" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Sisprev – Teófilo Otoni</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto9">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 10 -->
+                <div class="project-item" data-category="institucional educacional" id="projeto10">
+                    <div class="project-image">
+                        <img src="./img/projetos/uff/capa.webp" alt="UFF – Agência de Inovação" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>UFF – Agência de Inovação</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto10">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 11 -->
+                <div class="project-item" data-category="clinica" id="projeto11">
+                    <div class="project-image">
+                        <img src="./img/projetos/consultorio/capa.webp" alt="Consultório Médico" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Consultório Médico</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto11">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 12 -->
+                <div class="project-item" data-category="clinica" id="projeto12">
+                    <div class="project-image">
+                        <img src="./img/projetos/psi/capa.webp" alt="Clínica de Psicologia" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Clínica de Psicologia</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto12">Ver detalhes </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 13 -->
+                <div class="project-item" data-category="clinica" id="projeto13">
+                    <div class="project-image">
+                        <img src="./img/projetos/musicoterapia/capa.webp" alt="Sala de Musicoterapia" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Sala de Musicoterapia</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto13">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 14 -->
+                <div class="project-item" data-category="residencial" id="projeto14">
+                    <div class="project-image">
+                        <img src="./img/projetos/cozinha/capa.webp" alt="Projeto de Interiores – Cozinha" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Projeto de Interiores – Cozinha</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto14">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 15 -->
+                <div class="project-item" data-category="educacional lazer" id="projeto15">
+                    <div class="project-image">
+                        <img src="./img/projetos/unesp/capa.webp" alt="UNESP – São José do Rio Preto" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>UNESP – São José do Rio Preto</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto15">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 16 -->
+                <div class="project-item" data-category="institucional" id="projeto16">
+                    <div class="project-image">
+                        <img src="./img/projetos/ibitinga/capa.webp" alt="Prefeitura de Ibitinga / SP" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Prefeitura de Ibitinga / SP</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto16">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 17 -->
+                <div class="project-item" data-category="paisagismo" id="projeto17">
+                    <div class="project-image">
+                        <img src="./img/projetos/epitacio/capa.webp" alt="Prefeitura de Presidente Epitácio / SP" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Prefeitura de Presidente Epitácio / SP</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto17">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 18 -->
+                <div class="project-item" data-category="institucional" id="projeto18">
+                    <div class="project-image">
+                        <img src="./img/projetos/cref13/capa.webp" alt="CREF 13 / BA" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>CREF 13 / BA</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto18">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 19 -->
+                <div class="project-item" data-category="institucional" id="projeto19">
+                    <div class="project-image">
+                        <img src="./img/projetos/indianopolis/capa.webp" alt="Prefeitura de Indianópolis / PR" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Prefeitura de Indianópolis / PR</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto19">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 20 -->
+                <div class="project-item" data-category="institucional" id="projeto20">
+                    <div class="project-image">
+                        <img src="./img/projetos/acm/capa.webp" alt="Câmara dos Vereadores de Antônio Carlos" loading="lazy"> 
+                        <div class="project-overlay">
+                            <h3>Câmara dos Vereadores de Antônio Carlos</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto20">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 21 -->
+                <div class="project-item" data-category="institucional" id="projeto21">
+                    <div class="project-image">
+                        <img src="./img/projetos/srt/capa.webp" alt="Superintendência Regional do Trabalho do RS" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Superintendência Regional do Trabalho do RS</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto21">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 22 -->
+                <div class="project-item" data-category="institucional" id="projeto22">
+                    <div class="project-image">
+                        <img src="./img/projetos/prefeitura_de_pilar_do_sul/capa.webp" alt="Prefeitura de Pilar do Sul / SP">
+                        <div class="project-overlay">
+                            <h3>Prefeitura de Pilar do Sul / SP</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto22">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 23 -->
+                <div class="project-item" data-category="institucional" id="projeto23">
+                    <div class="project-image">
+                        <img src="./img/projetos/prefeitura_de_são_ludgero/capa.webp" alt="Prefeitura de São Ludgero / SC">
+                        <div class="project-overlay">
+                            <h3>Prefeitura de São Ludgero / SC</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto23">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 24 -->
+                <div class="project-item" data-category="institucional" id="projeto24">
+                    <div class="project-image">
+                        <img src="./img/projetos/cref_12/capa.webp" alt="CREF 12 / PE">
+                        <div class="project-overlay">
+                            <h3>CREF 12 / PE</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto24">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 25 -->
+                <div class="project-item" data-category="institucional lazer" id="projeto25">
+                    <div class="project-image">
+                        <img src="./img/projetos/polícia_militar_de_sp/capa.webp" alt="Polícia Militar de SP – Choque">
+                        <div class="project-overlay">
+                            <h3>Polícia Militar de SP – Choque</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto25">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 26 -->
+                <div class="project-item" data-category="institucional" id="projeto26">
+                    <div class="project-image">
+                        <img src="./img/projetos/câmara_de_ibitinga/capa.webp" alt="Câmara de Ibitinga / SP">
+                        <div class="project-overlay">
+                            <h3>Câmara de Ibitinga / SP</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto26">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 27 -->
+                <div class="project-item" data-category="institucional" id="projeto27">
+                    <div class="project-image">
+                        <img src="./img/projetos/cmbh/capa.webp" alt="CMBH – Câmara Municipal de Belo Horizonte">
+                        <div class="project-overlay">
+                            <h3>CMBH – Câmara Municipal de Belo Horizonte</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto27">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 28 -->
+                <div class="project-item" data-category="urbanismo" id="projeto28">
+                    <div class="project-image">
+                        <img src="./img/projetos/sie/capa.webp" alt="SIE / SC – Infraestrutura e Mobilidade">
+                        <div class="project-overlay">
+                            <h3>SIE / SC – Infraestrutura e Mobilidade</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto28">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 29 -->
+                <div class="project-item" data-category="hotelaria" id="projeto29">
+                    <div class="project-image">
+                        <img src="./img/projetos/sesc_pantanal/capa.webp" alt="SESC Pantanal / MT">
+                        <div class="project-overlay">
+                            <h3>SESC Pantanal / MT</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto29">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 30 -->
+                <div class="project-item" data-category="educacional hotelaria" id="projeto30">
+                    <div class="project-image">
+                        <img src="./img/projetos/sesc_pa/capa.webp" alt="SESC PA – Altamira">
+                        <div class="project-overlay">
+                            <h3>SESC PA – Altamira</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto30">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 31 -->
+                <div class="project-item" data-category="lazer" id="projeto31">
+                    <div class="project-image">
+                        <img src="./img/projetos/secec/capa.webp" alt="SECEC / RJ – Cinema Mendes">
+                        <div class="project-overlay">
+                            <h3>SECEC / RJ – Cinema Mendes</h3>
+                            <p>Projeto Institucional</p>
+                            <button class="view-project" data-id="projeto31">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Modal para detalhes do projeto -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="modal-title">Título do Projeto</h2>
+                <p id="modal-category">Categoria</p>
+            </div>
+            <div class="modal-gallery">
+                <div class="gallery-main">
+                    <img id="main-image" src="placeholder.jpg" alt="Imagem principal">
+                    <button class="gallery-nav prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="gallery-nav next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="gallery-thumbs" id="gallery-thumbs">
+                    <!-- Miniaturas serão adicionadas via JavaScript -->
+                </div>
+            </div>
+            <div class="modal-info">
+                <div class="project-description">
+                    <h3>Descrição</h3>
+                    <p id="modal-description">Descrição do projeto</p>
+                </div>
+                <div class="project-details">
+                    <h3>Detalhes</h3>
+                    <ul id="modal-details">
+                        <!-- Detalhes serão adicionados via JavaScript -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Gostou do que viu?</h2>
+            <p>Entre em contato para discutir seu próximo projeto</p>
+            <a href="contato.html" class="btn">Fale conosco</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./img/logo/logo.webp" alt="Recôncavo Engenharia e Arquitetura">
+                    <p>Soluções inovadoras em engenharia e arquitetura</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua Ilhéus, nº131, Rio Vermelho, Salvador/BA</p>
+                    <p><i class="fas fa-phone"></i> (71) 99214-3457</p>
+                    <p><i class="fas fa-phone"></i> (71) 99363-8809</p>
+                    <p><i class="fas fa-envelope"></i>atendimento@reconcavoea.com.br</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-icons">                        
+                        <a href="https://www.instagram.com/reconcavo.ea"><i class="fab fa-instagram"></i></a>
+                        <a href="https://br.linkedin.com/company/rec%C3%B4ncavo-engenharia-e-arquitetura-ltda"><i class="fab fa-linkedin-in"></i></a>
+                        <a href=""><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Recôncavo Engenharia e Arquitetura. Todos os direitos reservados.</p>
+                <p style="font-size: x-small;">Desenvolvido por <a href="https://www.taisgb.com.br/"></a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/global.js"></script>
+    <script src="./js/script-projetos.js"></script>
+    <script src="./js/badges.js"></script>
+
+</body>
+</html>

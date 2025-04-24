@@ -1,0 +1,672 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    if (filterButtons.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const filter = this.getAttribute('data-filter');
+
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                projectItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category').includes(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }   
+     
+
+    const viewProjectButtons = document.querySelectorAll('.view-project');
+    const projectModal = document.getElementById('projectModal');
+    const closeModal = document.querySelector('.close-modal');
+
+    if (viewProjectButtons.length > 0 && projectModal && closeModal) {
+        const projectsData = { /* ... dados dos projetos ... */ };
+
+        viewProjectButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const projectId = this.getAttribute('data-id');
+                const project = projectsData[projectId];
+
+                if (project) {
+                    document.getElementById('modal-title').textContent = project.title;
+                    document.getElementById('modal-category').textContent = project.category;
+                    document.getElementById('modal-description').textContent = project.description;
+
+                    const detailsList = document.getElementById('modal-details');
+                    detailsList.innerHTML = '';
+                    project.details.forEach(detail => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<strong>${detail.label}:</strong> ${detail.value}`;
+                        detailsList.appendChild(li);
+                    });
+
+                    const mainImage = document.getElementById('main-image');
+                    mainImage.src = project.images[0];
+                    mainImage.alt = project.title;
+
+                    const galleryThumbs = document.getElementById('gallery-thumbs');
+                    galleryThumbs.innerHTML = '';
+                    project.images.forEach((image, index) => {
+                        const thumb = document.createElement('div');
+                        thumb.className = index === 0 ? 'gallery-thumb active' : 'gallery-thumb';
+                        thumb.innerHTML = `<img src="${image}" alt="${project.title} - Imagem ${index + 1}">`;
+
+                        thumb.addEventListener('click', function () {
+                            mainImage.src = image;
+                            document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+                            this.classList.add('active');
+                        });
+                        galleryThumbs.appendChild(thumb);
+                    });
+
+                    let currentImageIndex = 0;
+                    const prevButton = document.querySelector('.gallery-nav.prev');
+                    const nextButton = document.querySelector('.gallery-nav.next');
+
+                    prevButton.addEventListener('click', function () {
+                        currentImageIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
+                        mainImage.src = project.images[currentImageIndex];
+                        document.querySelectorAll('.gallery-thumb').forEach((thumb, index) => {
+                            thumb.classList.toggle('active', index === currentImageIndex);
+                        });
+                    });
+
+                    nextButton.addEventListener('click', function () {
+                        currentImageIndex = (currentImageIndex + 1) % project.images.length;
+                        mainImage.src = project.images[currentImageIndex];
+                        document.querySelectorAll('.gallery-thumb').forEach((thumb, index) => {
+                            thumb.classList.toggle('active', index === currentImageIndex);
+                        });
+                    });
+
+                    projectModal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', function () {
+            projectModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target === projectModal) {
+                projectModal.style.display = 'none';
+            }
+        });
+    }
+    // Dados dos projetos (simulando um banco de dados)
+    const projectsData = {
+        projeto1: {
+            title: 'SESI',
+            category: 'Institucional/Administrativo, Educacional',
+            description: 'Serviços de arquitetura prestados sob demanda para o Sistema FIEPE, incluindo intervenções nas unidades do SESI Caruaru - Escola de Referência, SESI Goiana e na Casa da Indústria, com reforma do térreo ao 4º pavimento.',
+            details: [
+            { label: 'Cliente', value: 'SESI-PE / Sistema FIEPE' },
+            { label: 'Localização', value: 'Pernambuco' },            
+            { label: 'Ano', value: '2022' }            
+            ],
+            images: [
+                './img/projetos/sesi/sala_reuniao.webp',
+                './img/projetos/sesi/modal2.webp',
+                './img/projetos/sesi/modal3.webp',
+                './img/projetos/sesi/modal4.webp'
+            ]
+        },
+        projeto2: {
+            title: 'Prefeitura de Araraquara - SP',
+            category: 'Esportes',
+            description: 'Prestação de serviços técnicos especializados em arquitetura e engenharia para apoio à Secretaria Municipal de Desenvolvimento Urbano, com elaboração e revisão de projetos prediais e urbanos, incluindo equipamentos e infraestrutura externa do município.',
+            details: [
+            { label: 'Cliente', value: 'Prefeitura Municipal de Araraquara / SP' },
+            { label: 'Localização', value: 'Araraquara, SP' },            
+            { label: 'Ano', value: '2023' }           
+            ],
+            images: [
+                './img/projetos/araraquara/modal3.webp',
+                './img/projetos/araraquara/modal2.webp',
+                './img/projetos/araraquara/modal1.webp',
+                './img/projetos/araraquara/modal4.webp'
+            ]
+        },
+        projeto3: {
+            title: 'SESC ES – Colatina',
+            category: 'Educacional, Esportes',
+            description: 'Projeto de reforma e revitalização do Centro de Atividades do SESC Colatina, abrangendo fachada, escola, biblioteca, laboratórios, auditório, academia e áreas administrativas.',
+            details: [
+            { label: 'Cliente', value: 'SESC Espírito Santo' },
+            { label: 'Localização', value: 'Colatina, ES' },            
+            { label: 'Ano', value: '2023' }           
+            ],
+            images: [
+                './img/projetos/sesc_colatina/modal1.webp',
+                './img/projetos/sesc_colatina/modal2.webp',
+                './img/projetos/sesc_colatina/modal3.webp',
+                './img/projetos/sesc_colatina/modal4.webp'
+            ]
+        },
+        projeto4: {
+            title: 'Delegacia da Polícia Federal – Oiapoque/AP',
+            category: 'Institucional/Administrativo',
+            description: 'Elaboração de projetos básicos e executivos para a nova Delegacia da Polícia Federal em Oiapoque/AP, incluindo guarita, estande de tiro, canil, academia e áreas administrativas e operacionais.',
+            details: [
+            { label: 'Cliente', value: 'DPF/AP – Departamento de Polícia Federal' },
+            { label: 'Localização', value: 'Oiapoque, AP' },            
+            { label: 'Ano', value: '2021/2022' }           
+            ],
+            images: [
+                './img/projetos/De_Oiapoque/modal1.webp',
+                './img/projetos/De_Oiapoque/modal2.webp',
+                './img/projetos/De_Oiapoque/modal3.webp',
+                './img/projetos/De_Oiapoque/modal4.webp'
+            ]
+        },
+        projeto5: {
+            title: 'Câmara Municipal de Buritis – MG',
+            category: 'Obra Pública',
+            description: 'Elaboração de projetos arquitetônicos completos, incluindo interiores e complementares, para o prédio institucional da Câmara Municipal de Buritis e seu respectivo plenário.',
+            details: [
+                { label: 'Cliente', value: 'Câmara Municipal de Buritis / MG' },
+                { label: 'Localização', value: 'Buritis, MG' },                
+                { label: 'Ano', value: '2021' }        
+                ],
+            images: [
+                './img/projetos/buritis/modal1.webp',
+                './img/projetos/buritis/modal2.webp',
+                './img/projetos/buritis/modal3.webp',
+                './img/projetos/buritis/modal4.webp'
+            ]
+        },
+        projeto6: {
+            title: 'CREMEB – Delegacias Regionais',
+            category: 'Institucional',
+            description: 'Projeto e execução de adequação de layout e design de interiores para diversas Delegacias Regionais do CREMEB, com foco em funcionalidade, atendimento e identidade visual institucional.',
+            details: [
+            { label: 'Cliente', value: 'CREMEB – Conselho Regional de Medicina da Bahia' },
+            { label: 'Localização', value: 'Diversas cidades da Bahia' },            
+            { label: 'Ano', value: '2023' }
+            ],
+            images: [
+                './img/projetos/cremeb/modal1.webp',
+                './img/projetos/cremeb/modal2.webp',
+                './img/projetos/cremeb/modal3.webp',
+                './img/projetos/cremeb/modal4.webp'
+            ]
+        },
+        projeto7: {
+            title: 'SENAR/GO – Sede',
+            category: 'Institucional/Administrativo',
+            description: 'Contratação de empresa especializada na elaboração de projetos de arquitetura e engenharia para retrofit da sede do SENAR/AR-GO.',
+            details: [
+              { label: 'Cliente', value: 'SENAR/GO' },
+              { label: 'Localização', value: 'Goiás' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: [
+                './img/projetos/senar_sede/modal1.webp',
+                './img/projetos/senar_sede/modal2.webp',
+                './img/projetos/senar_sede/modal3.webp',
+                './img/projetos/senar_sede/modal4.webp'
+            ]
+          },
+          
+          projeto8: {
+            title: 'TRF1/BA – Justiça Federal',
+            category: 'Institucional/Administrativo',
+            description: 'Prestação de serviços técnicos especializados em arquitetura e engenharia para a reforma e adequação da sede da Justiça Federal em Salvador/BA.',
+            details: [
+              { label: 'Cliente', value: 'Justiça Federal – TRF1/BA' },
+              { label: 'Localização', value: 'Salvador, BA' },
+              { label: 'Ano', value: '2022' },
+            ],
+            images: [
+                './img/projetos/tr/modal1.webp',
+                './img/projetos/tr/modal2.webp',
+                './img/projetos/tr/modal3.webp',
+                './img/projetos/tr/modal4.webp'
+            ]
+          },
+          
+          projeto9: {
+            title: 'Sisprev – Teófilo Otoni',
+            category: 'Institucional/Administrativo',
+            description: 'Elaboração de projetos para adequação da sede da autarquia previdenciária municipal.',
+            details: [
+              { label: 'Cliente', value: 'Sisprev – Prefeitura de Teófilo Otoni' },
+              { label: 'Localização', value: 'Teófilo Otoni, MG' },
+              { label: 'Ano', value: '2022' },
+            ],
+            images: [
+                './img/projetos/sisprev/modal1.webp',
+                './img/projetos/sisprev/modal2.webp',
+                './img/projetos/sisprev/modal3.webp',
+                './img/projetos/sisprev/modal4.webp'
+            ]
+          },
+
+          projeto10: {
+            title: 'UFF – Agência de Inovação AGIR/UFF',
+            category: 'Educacional, Institucional/Administrativo',
+            description: 'Projeto de arquitetura e interiores para reforma e readequação da Agência de Inovação AGIR/UFF.',
+            details: [
+              { label: 'Cliente', value: 'Universidade Federal Fluminense' },
+              { label: 'Localização', value: 'Niterói, RJ' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: [
+                './img/projetos/uff/modal1.webp',
+                './img/projetos/uff/modal2.webp',
+                './img/projetos/uff/modal3.webp',
+                './img/projetos/uff/modal4.webp'
+            ]
+          },
+      
+          projeto11: {
+            title: 'Consultório Médico',
+            category: 'Clínicas/Saúde',
+            description: 'Projeto de interiores e layout funcional para consultório de atendimento clínico.',
+            details: [
+              { label: 'Cliente', value: 'Profissional da área de saúde' },
+              { label: 'Localização', value: 'Não especificado' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: [
+                './img/projetos/consultorio/modal1.webp',
+                './img/projetos/consultorio/modal2.webp',
+                './img/projetos/consultorio/modal3.webp',
+                './img/projetos/consultorio/modal4.webp'
+            ]
+          },
+      
+          projeto12: {
+            title: 'Clínica de Psicologia',
+            category: 'Clínicas/Saúde',
+            description: 'Reforma de interiores com foco em conforto, acolhimento e funcionalidade.',
+            details: [
+              { label: 'Cliente', value: 'Clínica particular' },
+              { label: 'Localização', value: '' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: [
+                './img/projetos/psi/modal1.webp',
+                './img/projetos/psi/modal2.webp',
+                './img/projetos/psi/modal3.webp',
+                './img/projetos/psi/modal4.webp'
+            ]
+          },
+      
+          projeto13: {
+            title: 'Sala de Musicoterapia',
+            category: 'Clínicas/Saúde',
+            description: 'Projeto de sala terapêutica com adequações acústicas e sensoriais.',
+            details: [
+              { label: 'Cliente', value: 'Instituição de saúde ou educacional' },
+              { label: 'Localização', value: '-' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: [
+                './img/projetos/musicoterapia/modal1.webp',
+                './img/projetos/musicoterapia/modal2.webp',
+                './img/projetos/musicoterapia/modal3.webp',
+                './img/projetos/musicoterapia/modal4.webp'
+            ]
+          },
+      
+          projeto14: {
+            title: 'Projeto de Interiores – Cozinha',
+            category: 'Residencial, Interiores',
+            description: 'Projeto de cozinha funcional com integração a ambientes sociais.',
+            details: [
+              { label: 'Cliente', value: 'Cliente residencial' },
+              { label: 'Localização', value: '-' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: [
+                './img/projetos/cozinha/modal1.webp',
+                './img/projetos/cozinha/modal2.webp',
+                './img/projetos/cozinha/modal3.webp',
+                './img/projetos/cozinha/modal4.webp'
+            ]
+          },
+      
+          projeto15: {
+            title: 'UNESP – São José do Rio Preto',
+            category: 'Educacional, Cultura/Lazer',
+            description: 'Projeto de moradia estudantil e espaço expositivo (museu) na UNESP – campus de São José do Rio Preto.',
+            details: [
+              { label: 'Cliente', value: 'UNESP' },
+              { label: 'Localização', value: 'São José do Rio Preto, SP' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: [
+                './img/projetos/unesp/modal1.webp',
+                './img/projetos/unesp/modal2.webp',
+                './img/projetos/unesp/modal3.webp',
+                './img/projetos/unesp/modal4.webp'
+            ]
+          },
+      
+          projeto16: {
+            title: 'Prefeitura de Ibitinga / SP',
+            category: 'Institucional/Administrativo',
+            description: 'Projeto para adequação e reforma de estrutura pública em Ibitinga, SP.',
+            details: [
+              { label: 'Cliente', value: 'Prefeitura Municipal de Ibitinga' },
+              { label: 'Localização', value: 'Ibitinga, SP' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: [
+                './img/projetos/ibitinga/modal1.webp',
+                './img/projetos/ibitinga/modal2.webp',
+                './img/projetos/ibitinga/modal3.webp',
+                './img/projetos/ibitinga/modal4.webp'
+            ]
+          },
+      
+          projeto17: {
+            title: 'Prefeitura de Presidente Epitácio / SP',
+            category: 'Paisagismo',
+            description: 'Projeto paisagístico com modelagem 3D para áreas públicas do município.',
+            details: [
+              { label: 'Cliente', value: 'Prefeitura Municipal de Presidente Epitácio' },
+              { label: 'Localização', value: 'Presidente Epitácio, SP' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: [
+                './img/projetos/epitacio/modal1.webp',
+                './img/projetos/epitacio/modal2.webp',
+                './img/projetos/epitacio/modal3.webp',
+                './img/projetos/epitacio/modal4.webp'
+            ]
+          },
+      
+          projeto18: {
+            title: 'CREF 13 / BA',
+            category: 'Institucional/Administrativo',
+            description: 'Projeto técnico e de interiores para sede regional do CREF 13 na Bahia.',
+            details: [
+              { label: 'Cliente', value: 'CREF 13 / BA' },
+              { label: 'Localização', value: 'Bahia' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: [
+                './img/projetos/cref13/modal1.webp',
+                './img/projetos/cref13/modal2.webp',
+                './img/projetos/cref13/modal3.webp',
+                './img/projetos/cref13/modal4.webp'
+            ]
+          },
+      
+          projeto19: {
+            title: 'Prefeitura de Indianópolis / PR',
+            category: 'Institucional/Administrativo',
+            description: 'Projetos técnicos e arquitetônicos diversos para o município de Indianópolis.',
+            details: [
+              { label: 'Cliente', value: 'Prefeitura de Indianópolis' },
+              { label: 'Localização', value: 'Indianópolis, PR' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: [
+                './img/projetos/indianopolis/modal1.webp',
+                './img/projetos/indianopolis/modal2.webp',
+                './img/projetos/indianopolis/modal3.webp',
+                './img/projetos/indianopolis/modal4.webp'
+            ]
+          },
+      
+          projeto20: {
+            title: 'Câmara dos Vereadores de Antônio Carlos / SC',
+            category: 'Institucional/Administrativo',
+            description: 'Elaboração de projeto arquitetônico e reforma da Câmara Municipal de Antônio Carlos.',
+            details: [
+              { label: 'Cliente', value: 'Câmara Municipal de Antônio Carlos' },
+              { label: 'Localização', value: 'Antônio Carlos, SC' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: [
+                './img/projetos/acm/modal1.webp',
+                './img/projetos/acm/modal2.webp',
+                './img/projetos/acm/modal3.webp',
+                './img/projetos/acm/modal4.webp'
+            ]
+          },
+      
+          projeto21: {
+            title: 'Superintendência Regional do Trabalho do RS',
+            category: 'Institucional/Administrativo',
+            description: 'Projeto de reforma da sede da Superintendência Regional do Trabalho no Rio Grande do Sul.',
+            details: [
+              { label: 'Cliente', value: 'Superintendência Regional do Trabalho do RS' },
+              { label: 'Localização', value: 'Rio Grande do Sul' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: [
+                './img/projetos/srt/modal1.webp',
+                './img/projetos/srt/modal2.webp',
+                './img/projetos/srt/modal3.webp',
+                './img/projetos/srt/modal4.webp'
+            ]
+          },
+
+          projeto22: {
+            title: 'Prefeitura de Pilar do Sul / SP',
+            category: 'institucional',
+            description: 'Projeto de arquitetura e engenharia para adequações em prédios públicos do município de Pilar do Sul.',
+            details: [
+              { label: 'Cliente', value: 'Prefeitura Municipal de Pilar do Sul' },
+              { label: 'Localização', value: 'Pilar do Sul, SP' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: []
+          },
+          
+          projeto23: {
+            title: 'Prefeitura de São Ludgero / SC',
+            category: 'institucional',
+            description: 'Projetos técnicos para atendimento das demandas públicas da prefeitura de São Ludgero.',
+            details: [
+              { label: 'Cliente', value: 'Prefeitura de São Ludgero' },
+              { label: 'Localização', value: 'São Ludgero, SC' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: []
+          },
+          
+          projeto24: {
+            title: 'CREF 12 / PE',
+            category: 'institucional',
+            description: 'Projetos arquitetônicos para adequações administrativas do CREF 12 em Pernambuco.',
+            details: [
+              { label: 'Cliente', value: 'CREF 12 – Conselho Regional de Educação Física' },
+              { label: 'Localização', value: 'Pernambuco' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: []
+          },
+          
+          projeto25: {
+            title: 'Polícia Militar de SP – Choque',
+            category: 'institucional lazer',
+            description: 'Projeto de reforma no mezanino do batalhão de polícia de choque, com espaço de convivência e lazer para os oficiais.',
+            details: [
+              { label: 'Cliente', value: 'Polícia Militar de São Paulo' },
+              { label: 'Localização', value: 'São Paulo, SP' },
+              { label: 'Ano', value: '2022' },
+            ],
+            images: []
+          },
+          
+          projeto26: {
+            title: 'Câmara de Ibitinga / SP',
+            category: 'institucional',
+            description: 'Elaboração de projeto arquitetônico e complementares para reforma da Câmara Municipal de Ibitinga.',
+            details: [
+              { label: 'Cliente', value: 'Câmara Municipal de Ibitinga' },
+              { label: 'Localização', value: 'Ibitinga, SP' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: []
+          },
+          
+          projeto27: {
+            title: 'CMBH – Câmara Municipal de Belo Horizonte',
+            category: 'institucional',
+            description: 'Projetos técnicos para reforma e modernização do Palácio Francisco Bicalho, sede da Câmara de Belo Horizonte.',
+            details: [
+              { label: 'Cliente', value: 'Câmara Municipal de Belo Horizonte' },
+              { label: 'Localização', value: 'Belo Horizonte, MG' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: []
+          },
+          
+          projeto28: {
+            title: 'SIE / SC – Secretaria de Infraestrutura e Mobilidade',
+            category: 'urbanismo',
+            description: 'Projeto de revitalização urbana para áreas externas com foco em acessibilidade e paisagismo técnico.',
+            details: [
+              { label: 'Cliente', value: 'Secretaria de Infraestrutura e Mobilidade de SC' },
+              { label: 'Localização', value: 'Santa Catarina' },
+              { label: 'Ano', value: '2022' },
+            ],
+            images: []
+          },
+          
+          projeto29: {
+            title: 'SESC Pantanal / MT',
+            category: 'hotelaria',
+            description: 'Projeto de reforma no bloco de serviços do SESC Pantanal, incluindo vestiários e área de reciclagem.',
+            details: [
+              { label: 'Cliente', value: 'SESC – Pantanal' },
+              { label: 'Localização', value: 'Mato Grosso' },
+              { label: 'Ano', value: '2022' },
+            ],
+            images: []
+          },
+          
+          projeto30: {
+            title: 'SESC PA – Altamira',
+            category: 'educacional hotelaria',
+            description: 'Projeto de reforma da Unidade Operacional do SESC Altamira, com foco em ambientes escolares e de hospedagem.',
+            details: [
+              { label: 'Cliente', value: 'SESC Pará' },
+              { label: 'Localização', value: 'Altamira, PA' },
+              { label: 'Ano', value: '2022' },
+            ],
+            images: []
+          },
+          
+          projeto31: {
+            title: 'SECEC / RJ – Cinema na Cidade Mendes',
+            category: 'lazer',
+            description: 'Projeto arquitetônico e de interiores para instalação de cinema público na cidade de Mendes/RJ.',
+            details: [
+              { label: 'Cliente', value: 'Secretaria de Estado de Cultura e Economia Criativa do RJ' },
+              { label: 'Localização', value: 'Mendes, RJ' },
+              { label: 'Ano', value: '2023' },
+            ],
+            images: []
+          },
+
+    };
+
+    if (viewProjectButtons.length > 0) {
+        viewProjectButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const projectId = this.getAttribute('data-id');
+                const project = projectsData[projectId];
+                
+                if (project) {
+                    // Preencher o modal com os dados do projeto
+                    document.getElementById('modal-title').textContent = project.title;
+                    document.getElementById('modal-category').textContent = project.category;
+                    document.getElementById('modal-description').textContent = project.description;
+                    
+                    // Preencher os detalhes
+                    const detailsList = document.getElementById('modal-details');
+                    detailsList.innerHTML = '';
+                    
+                    project.details.forEach(detail => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<strong>${detail.label}:</strong> ${detail.value}`;
+                        detailsList.appendChild(li);
+                    });
+                    
+                    // Preencher a galeria
+                    const mainImage = document.getElementById('main-image');
+                    mainImage.src = project.images[0];
+                    mainImage.alt = project.title;
+                    mainImage.loading = 'lazy';
+                    
+                    const galleryThumbs = document.getElementById('gallery-thumbs');
+                    galleryThumbs.innerHTML = '';
+                    
+                    project.images.forEach((image, index) => {
+                        const thumb = document.createElement('div');
+                        thumb.className = index === 0 ? 'gallery-thumb active' : 'gallery-thumb';
+                        thumb.innerHTML = `<img src="${image}" alt="${project.title} - Imagem ${index + 1}" loading="lazy">`;
+                        
+                        thumb.addEventListener('click', function() {
+                            mainImage.src = image;
+                            
+                            document.querySelectorAll('.gallery-thumb').forEach(t => {
+                                t.classList.remove('active');
+                            });
+                            
+                            this.classList.add('active');
+                        });
+                        
+                        galleryThumbs.appendChild(thumb);
+                    });
+                    
+                    // Navegação da galeria
+                    const prevButton = document.querySelector('.gallery-nav.prev');
+                    const nextButton = document.querySelector('.gallery-nav.next');
+                    let currentImageIndex = 0;
+                    
+                    prevButton.addEventListener('click', function() {
+                        currentImageIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
+                        mainImage.src = project.images[currentImageIndex];
+                        
+                        document.querySelectorAll('.gallery-thumb').forEach((thumb, index) => {
+                            thumb.classList.toggle('active', index === currentImageIndex);
+                        });
+                    });
+                    
+                    nextButton.addEventListener('click', function() {
+                        currentImageIndex = (currentImageIndex + 1) % project.images.length;
+                        mainImage.src = project.images[currentImageIndex];
+                        
+                        document.querySelectorAll('.gallery-thumb').forEach((thumb, index) => {
+                            thumb.classList.toggle('active', index === currentImageIndex);
+                        });
+                    });
+                    
+                    // Exibir o modal
+                    projectModal.style.display = 'block';
+                }
+            });
+        });
+        
+        // Fechar o modal
+        closeModal.addEventListener('click', function() {
+            projectModal.style.display = 'none';
+        });
+        
+        // Fechar o modal ao clicar fora do conteúdo
+        window.addEventListener('click', function(event) {
+            if (event.target === projectModal) {
+                projectModal.style.display = 'none';
+            }
+        });
+    } 
+});
+
+    
+    
