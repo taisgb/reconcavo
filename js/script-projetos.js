@@ -463,7 +463,12 @@ document.addEventListener('DOMContentLoaded', function () {
               { label: 'Localização', value: 'Pilar do Sul, SP' },
               { label: 'Ano', value: '2023' },
             ],
-            images: []
+            images: [
+                './img/projetos/pilar/modal1.webp',
+                './img/projetos/pilar/modal2.webp',
+                './img/projetos/pilar/modal3.webp',
+                './img/projetos/pilar/modal4.webp'
+            ]
           },
           
           projeto23: {
@@ -475,7 +480,11 @@ document.addEventListener('DOMContentLoaded', function () {
               { label: 'Localização', value: 'São Ludgero, SC' },
               { label: 'Ano', value: '2023' },
             ],
-            images: []
+            images: [
+                './img/projetos/ludgero/modal1.webp',
+                './img/projetos/ludgero/modal2.webp',
+                './img/projetos/ludgero/modal3.webp',
+                './img/projetos/ludgero/modal4.webp']
           },
           
           projeto24: {
@@ -487,7 +496,12 @@ document.addEventListener('DOMContentLoaded', function () {
               { label: 'Localização', value: 'Pernambuco' },
               { label: 'Ano', value: '2023' },
             ],
-            images: []
+            images: [
+                './img/projetos/cref12/modal1.webp',
+                './img/projetos/cref12/modal2.webp',
+                './img/projetos/cref12/modal3.webp',
+                './img/projetos/cref12/modal4.webp'
+            ]
           },
           
           projeto25: {
@@ -499,22 +513,16 @@ document.addEventListener('DOMContentLoaded', function () {
               { label: 'Localização', value: 'São Paulo, SP' },
               { label: 'Ano', value: '2022' },
             ],
-            images: []
-          },
+            images: [
+                './img/projetos/pmsp/modal1.webp',
+                './img/projetos/pmsp/modal2.webp',
+                './img/projetos/pmsp/modal3.webp',
+                './img/projetos/pmsp/modal4.webp'
+            ]
+          },      
+          
           
           projeto26: {
-            title: 'Câmara de Ibitinga / SP',
-            category: 'institucional',
-            description: 'Elaboração de projeto arquitetônico e complementares para reforma da Câmara Municipal de Ibitinga.',
-            details: [
-              { label: 'Cliente', value: 'Câmara Municipal de Ibitinga' },
-              { label: 'Localização', value: 'Ibitinga, SP' },
-              { label: 'Ano', value: '2023' },
-            ],
-            images: []
-          },
-          
-          projeto27: {
             title: 'CMBH – Câmara Municipal de Belo Horizonte',
             category: 'institucional',
             description: 'Projetos técnicos para reforma e modernização do Palácio Francisco Bicalho, sede da Câmara de Belo Horizonte.',
@@ -523,10 +531,15 @@ document.addEventListener('DOMContentLoaded', function () {
               { label: 'Localização', value: 'Belo Horizonte, MG' },
               { label: 'Ano', value: '2023' },
             ],
-            images: []
+            images: [
+                './img/projetos/cmbh/modal1.webp',
+                './img/projetos/cmbh/modal2.webp',
+                './img/projetos/cmbh/modal3.webp',
+                './img/projetos/cmbh/modal4.webp'
+            ]
           },
           
-          projeto28: {
+          projeto27: {
             title: 'SIE / SC – Secretaria de Infraestrutura e Mobilidade',
             category: 'urbanismo',
             description: 'Projeto de revitalização urbana para áreas externas com foco em acessibilidade e paisagismo técnico.',
@@ -535,10 +548,15 @@ document.addEventListener('DOMContentLoaded', function () {
               { label: 'Localização', value: 'Santa Catarina' },
               { label: 'Ano', value: '2022' },
             ],
-            images: []
+            images: [
+                './img/projetos/sie/modal1.webp',
+                './img/projetos/sie/modal2.webp',
+                './img/projetos/sie/modal3.webp',
+                './img/projetos/sie/modal4.webp'
+            ]
           },
           
-          projeto29: {
+          projeto28: {
             title: 'SESC Pantanal / MT',
             category: 'hotelaria',
             description: 'Projeto de reforma no bloco de serviços do SESC Pantanal, incluindo vestiários e área de reciclagem.',
@@ -547,10 +565,15 @@ document.addEventListener('DOMContentLoaded', function () {
               { label: 'Localização', value: 'Mato Grosso' },
               { label: 'Ano', value: '2022' },
             ],
-            images: []
+            images: [
+                './img/projetos/sesc_mt/modal1.webp',
+                './img/projetos/sesc_mt/modal2.webp',
+                './img/projetos/sesc_mt/modal3.webp',
+                './img/projetos/sesc_mt/modal4.webp'
+            ]
           },
           
-          projeto30: {
+          projeto29: {
             title: 'SESC PA – Altamira',
             category: 'educacional hotelaria',
             description: 'Projeto de reforma da Unidade Operacional do SESC Altamira, com foco em ambientes escolares e de hospedagem.',
@@ -559,10 +582,15 @@ document.addEventListener('DOMContentLoaded', function () {
               { label: 'Localização', value: 'Altamira, PA' },
               { label: 'Ano', value: '2022' },
             ],
-            images: []
+            images: [
+                './img/projetos/sesc_pa/modal1.webp',
+                './img/projetos/sesc_pa/modal2.webp',
+                './img/projetos/sesc_pa/modal3.webp',
+                './img/projetos/sesc_pa/modal4.webp'
+            ]
           },
           
-          projeto31: {
+          projeto30: {
             title: 'SECEC / RJ – Cinema na Cidade Mendes',
             category: 'lazer',
             description: 'Projeto arquitetônico e de interiores para instalação de cinema público na cidade de Mendes/RJ.',
@@ -571,7 +599,12 @@ document.addEventListener('DOMContentLoaded', function () {
               { label: 'Localização', value: 'Mendes, RJ' },
               { label: 'Ano', value: '2023' },
             ],
-            images: []
+            images: [
+                './img/projetos/secec/modal1.webp',
+                './img/projetos/secec/modal2.webp',
+                './img/projetos/secec/modal3.webp',
+                './img/projetos/secec/modal4.webp'
+            ]
           },
 
     };
