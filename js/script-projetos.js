@@ -101,6 +101,58 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+      //Botão ver mais - load
+
+      const loadMoreButton = document.getElementById('load-more');
+      let visibleCount = 9;
+
+      function showProjects(count) {
+          let shown = 0;
+          let hiddenStillAvailable = false;
+
+          const currentFilter = document.querySelector('.filter-btn.active')?.getAttribute('data-filter') || 'all';
+
+          projectItems.forEach(item => {
+              const categories = item.getAttribute('data-category');
+              const matchesFilter = currentFilter === 'all' || categories.includes(currentFilter);
+
+              if (matchesFilter) {
+                  if (shown < count) {
+                      item.style.display = 'block';
+                      shown++;
+                  } else {
+                      item.style.display = 'none';
+                      hiddenStillAvailable = true;
+                  }
+              } else {
+                  item.style.display = 'none';
+              }
+          });
+
+          loadMoreButton.style.display = hiddenStillAvailable ? 'inline-block' : 'none';
+      }
+
+      // Inicializa
+      showProjects(visibleCount);
+
+      // Clique no botão
+      if (loadMoreButton) {
+          loadMoreButton.addEventListener('click', () => {
+              visibleCount += 9;
+              showProjects(visibleCount);
+          });
+      }
+
+      // Quando muda o filtro
+      filterButtons.forEach(button => {
+          button.addEventListener('click', () => {
+              visibleCount = 9;
+              showProjects(visibleCount);
+          });
+      });
+
+
     // Dados dos projetos (simulando um banco de dados)
     const projectsData = {
         projeto1: {
@@ -698,7 +750,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 projectModal.style.display = 'none';
             }
         });
-    } 
+    }     
 });
 
     

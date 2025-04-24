@@ -774,6 +774,21 @@ footer {
     position: relative;
     overflow: hidden;
   }
+
+  #load-more.btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #0055a5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#load-more.btn:hover {
+    background-color: #003f7d;
+}
+
   
  
   .badge {   
