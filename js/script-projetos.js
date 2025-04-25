@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Clique no botão
       if (loadMoreButton) {
           loadMoreButton.addEventListener('click', () => {
-              visibleCount += 9;
+              visibleCount += 8;
               showProjects(visibleCount);
           });
       }
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Quando muda o filtro
       filterButtons.forEach(button => {
           button.addEventListener('click', () => {
-              visibleCount = 9;
+              visibleCount = 8;
               showProjects(visibleCount);
           });
       });
