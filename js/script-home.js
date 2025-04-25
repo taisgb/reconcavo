@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (clientsTrack && prevButton && nextButton) {
         const clientLogos = document.querySelectorAll('.client-logo');
-        const logoWidth = clientLogos[0].offsetWidth + 40;
+        const logoWidth = clientLogos[0].offsetWidth + 31;
         const visibleLogos = Math.floor(clientsTrack.parentElement.offsetWidth / logoWidth);
         let position = 0;
         const maxPosition = clientLogos.length - visibleLogos;

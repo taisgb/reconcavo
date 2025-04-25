@@ -285,7 +285,7 @@ header .container {
   }
   
 
-/* Featured Projects */
+/* Projetos página principal */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -325,7 +325,7 @@ header .container {
     color: var(--dark-gray);
 }
 
-/* Clients Section */
+/* Clientes Home */
 .clients {
     background-color: var(--primary-color);
     padding: 60px 0;
@@ -403,7 +403,7 @@ header .container {
     margin-left: 10px;
 }
 
-/* CTA Section */
+/* CTA */
 .cta {
     background-color: var(--secondary-color);
     text-align: center;
@@ -508,7 +508,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Page Header */
+/* Header */
 .page-header {
     background-color: var(--primary-color);
     color: var(--white);
@@ -526,7 +526,7 @@ footer {
     font-size: 18px;
 }
 
-/* About Page */
+/* PÁGINA SOBRE */
 .about-intro {
     padding-bottom: 40px;
 }
@@ -784,10 +784,10 @@ footer {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-#load-more.btn:hover {
-    background-color: #003f7d;
-}
+    }
+    #load-more.btn:hover {
+        background-color: #003f7d;
+    }
 
   
  
@@ -812,7 +812,7 @@ footer {
     .badge.paisagismo      { background-color: #689F38; } 
     .badge.clinica         { background-color: #90A4AE; }  
 
-/* Project Modal */
+/* Modal PROJETOS */
 .project-modal {
     display: none;
     position: fixed;
@@ -961,7 +961,7 @@ footer {
     color: var(--primary-color);
 }
 
-/* Contact Page */
+/* PÁGINA DE CONTATO */
 .contact-info {
     margin-bottom: 40px;
 }
@@ -1052,7 +1052,48 @@ footer {
 }
 
 
-/* Responsive Styles */
+/* Responsividade */
+@media (min-width: 1600px) {
+    body {
+      font-size: 18px;
+    }
+
+    header .container {
+        justify-content: space-between;
+        padding: 1px 60px;
+      }
+  
+    .hero h1 {
+      font-size: 56px;
+    }
+
+    .hero p {
+        font-size: 22px;
+      }
+  
+    .project-card img {
+      height: 280px;
+    }
+  
+    .container {
+      max-width: 1400px;
+    }
+  
+    .clients-carousel-container {
+      max-width: 1400px;
+    }
+    section {
+        padding: 100px 0;
+    }
+
+    footer .container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+      
+  }  
+
+
 @media (max-width: 992px) {
     .about-content,
     .contact-wrapper,
@@ -1072,14 +1113,14 @@ footer {
     
     .menu {
         display: none;
+        flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         background-color: var(--white);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        flex-direction: column;
-        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);        
+        padding: 10px;
     }
     
     .menu.active {
@@ -1087,9 +1128,15 @@ footer {
     }
     
     .menu li {
-        margin: 10px 0;
+        margin: 5px 0;
     }
     
+    .menu a {
+        line-height: 1.4;
+        padding: 12px 20px;
+        font-size: 16px;        
+    }
+
     .menu-mobile {
         display: block;
     }
