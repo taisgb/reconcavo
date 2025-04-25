@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
       //Botão ver mais - load
 
       const loadMoreButton = document.getElementById('load-more');
-      let visibleCount = 9;
+      let visibleCount = 8;
 
       function showProjects(count) {
           let shown = 0;
