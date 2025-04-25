@@ -126,7 +126,7 @@ header .container {
     font-weight: 700;
     position: relative;
     padding-bottom: 5px;
-     line-height: 90px; 
+    line-height: 90px; 
 }
 
 .menu a:after {
@@ -475,6 +475,8 @@ footer {
     margin-bottom: 10px;    
 }
 
+
+
 .footer-contact i {
     margin-right: 10px;
     color: var(--secondary-color);
@@ -506,7 +508,26 @@ footer {
     text-align: center;
     padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
+    text-align: center; /* Centraliza os <p> */
+    background-color: #555;
+    padding: 10px;
+  }
+  
+  #gb {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: white !important;
+  }
+  
+  #gb a {
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+  }
 
 
 /* Header */
@@ -542,6 +563,10 @@ footer {
 .about-text h2 {
     font-size: 32px;
     margin-bottom: 20px;
+}
+
+.about-text p {
+    text-align: justify;
 }
 
 .about-image img {
@@ -1004,7 +1029,64 @@ footer {
     gap: 30px;
 }
 
-.form-container,
+    /* Estilos do formulário */
+    form {
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f4f4f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilo para os rótulos */
+    form label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    /* Estilo para os inputs */
+    form input, form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    /* Estilo para a área de texto (mensagem) */
+    form textarea {
+        height: 150px;
+        resize: vertical;
+    }
+
+    /* Estilo para o botão de envio */
+    form button {
+        width: 100%;
+        padding: 14px;
+        background-color: #0055a5;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    form button:hover {
+        background-color: #003f7d;
+    }
+
+    /* Espaçamento entre os campos */
+    form input, form textarea {
+        margin-bottom: 15px;
+    }
+
+
 .map-container {
     background-color: var(--white);
     padding: 30px;
@@ -1012,44 +1094,10 @@ footer {
     box-shadow: var(--shadow);
 }
 
-.form-container h2,
 .map-container h2 {
     margin-bottom: 30px;
 }
 
-.contact-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group.full-width {
-    grid-column: span 2;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
-    font-family: inherit;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
 
 .map {
     height: 300px;
@@ -1335,3 +1383,5 @@ img.loaded {
     margin-top: 15px;
     text-align: left;
   }
+
+  
