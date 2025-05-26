@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-        <title>Recôncavo Engenharia | Projetos Inovadores</title>
+        <title>Recôncavo Engenharia e Arquitetura</title>
         <meta name="description" content="A Recôncavo Engenharia e Arquitetura oferece soluções inovadoras em projetos residenciais, comerciais e industriais com foco em qualidade, sustentabilidade e excelência técnica.">
-        <meta name="keywords" content="engenharia, arquitetura, projetos, construção, salvador, bahia, recôncavo">
+        <meta name="keywords" content="engenharia, arquitetura, projeto de arquitetura, projeto de interiores, projeto para condomínio, projeto clínico, projeto cozinha, projeto para aprovação, arquiteto Salvador, arquiteto Bahia, arquiteto popular, projeto de casa, planta de arquitetura, planta de casa, projeto comercial, projeto restaurante, projeto bar, projeto sala de odontologia, projeto de consultório, projeto escola, elaboração de projetos, construção, salvador, bahia, recôncavo">
+
         <meta name="author" content="Recôncavo Engenharia e Arquitetura">
         <meta name="robots" content="index, follow">
       
@@ -21,7 +22,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
       
         <!-- Favicon e ícones -->
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="./img/logo/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
       
         <!-- Open Graph (Facebook, LinkedIn) -->
@@ -29,35 +30,93 @@
         <meta property="og:url" content="https://reconcavoea.com.br/">
         <meta property="og:title" content="Recôncavo Engenharia | Projetos Inovadores">
         <meta property="og:description" content="Soluções inovadoras em engenharia e arquitetura para projetos residenciais, comerciais e industriais.">
-        <meta property="og:image" content="https://reconcavoea.com.br/img/social/og-image.jpg">
+        <meta property="og:image" content="https://reconcavoea.com.br/img/social/social-share.png">
       
         <!-- Twitter Cards -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:url" content="https://reconcavoea.com.br/">
         <meta name="twitter:title" content="Recôncavo Engenharia | Projetos Inovadores">
         <meta name="twitter:description" content="Soluções inovadoras em engenharia e arquitetura para projetos residenciais, comerciais e industriais.">
-        <meta name="twitter:image" content="https://reconcavoea.com.br/img/social/og-image.jpg">
+        <meta name="twitter:image" content="https://reconcavoea.com.br/img/social/social-share.png">
       
         <!-- Structured Data (JSON-LD) -->
         <script type="application/ld+json">
         {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Recôncavo Engenharia e Arquitetura",
-          "url": "https://reconcavoea.com.br",
-          "logo": "https://reconcavoea.com.br/img/logo/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+55-71-99214-3457",
-            "contactType": "customer service",
-            "availableLanguage": "Portuguese"
-          },
-          "sameAs": [
-            "https://www.facebook.com/reconcavoengenharia",
-            "https://www.instagram.com/reconcavoengenharia",
-            "https://www.linkedin.com/company/reconcavoengenharia"
-          ]
-        }
+            "@context": "https://schema.org",
+            "@type": ["Organization", "LocalBusiness"],
+            "name": "Recôncavo Engenharia e Arquitetura",
+            "alternateName": "Recôncavo EA",
+            "url": "https://reconcavoea.com.br",
+            "logo": "https://reconcavoea.com.br/img/logo/logo.webp",
+            "description": "Soluções completas em projetos de arquitetura e engenharia em Salvador/BA",
+            "foundingDate": "2019",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rua Ilhéus, 131",
+                "addressLocality": "Salvador",
+                "addressRegion": "BA",
+                "postalCode": "41950-000",
+                "addressCountry": "BR"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "-13.01036",
+                "longitude": "-38.49072"
+            },
+            "openingHours": "Mo-Fr 08:30-17:30",
+            "telephone": "+5571992143457",
+            "email": "atendimento@reconcavoea.com.br",
+            "priceRange": "$$",
+            "image": [
+                "https://reconcavoea.com.br/img/projetos/cozinha/capa.webp",
+                "https://reconcavoea.com.br/img/projetos/musicoterapia/capa.webp"
+            ],
+            "contactPoint": [
+                {
+                "@type": "ContactPoint",
+                "telephone": "+5571992143457",
+                "contactType": "Atendimento ao cliente",
+                "areaServed": "BR",
+                "availableLanguage": "Portuguese"
+                },
+                {
+                "@type": "ContactPoint",
+                "telephone": "+5571993638809",
+                "contactType": "Suporte técnico",
+                "areaServed": "BR"
+                }
+            ],
+            "sameAs": [
+                "https://www.instagram.com/reconcavo.ea",
+                "https://br.linkedin.com/company/rec%C3%B4ncavo-engenharia-e-arquitetura-ltda"
+            ],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Serviços de Engenharia e Arquitetura",
+                "itemListElement": [
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Projetos Arquitetônicos",
+                    "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                        "@type": "Service",
+                        "name": "Projeto Residencial"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                        "@type": "Service",
+                        "name": "Projeto Comercial"
+                        }
+                    }
+                    ]
+                }
+                ]
+            }
+        }        
         </script>
       </head>
 <body>
@@ -92,9 +151,14 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>Nossa História</h2>
-                    <p>A Recôncavo Engenharia foi fundada em 2019, a partir da união entre uma arquiteta e urbanista, especialista em projetos desenvolvidos com metodologia BIM, e uma engenheira civil com formação em administração, com atuação nas áreas de contratos, orçamentos e licitações.</p>
-                    <p>Ao longo desses anos, desenvolvemos centenas de projetos em diversos segmentos, sempre com foco na qualidade, inovação e sustentabilidade. Nossa equipe multidisciplinar trabalha de forma integrada para oferecer soluções completas e personalizadas para cada cliente.</p>
-                    <p>Conta com uma equipe multidisciplinar composta por arquitetos e engenheiros capacitados, que atuam em todas as etapas do projeto, desde a concepção até a entrega, com foco em compatibilização, eficiência, desempenho e viabilidade executiva.</p>
+                    <p>A Recôncavo Engenharia foi fundada em 2019, a partir da união entre uma arquiteta e urbanista, especialista em projetos desenvolvidos com metodologia BIM, e uma engenheira civil com formação em Administração, com atuação nas áreas de contratos, orçamentos e licitações.</p>
+                    <p>Ao longo desses anos, desenvolvemos centenas de projetos em diversos segmentos, sempre com foco na qualidade, inovação e sustentabilidade. Nossa equipe multidisciplinar trabalha de forma integrada para oferecer soluções completas e personalizadas para cada cliente.</p>                    
+                    <h3>Equipe</h3>
+                    <p>A Recôncavo busca excelência em seus projetos desenvolvidos, contando hoje com arquitetos graduados e especialistas em Elaboração de Projetos e Modelagem BIM. Além disso, conta com engenheiros civis, eletricistas e mecânicos, com mais de 10 anos de experiência.</p>
+                    <h3>Diretoria</h3>
+                    <p>A gestão da empresa é realizada pelas suas duas sócias e responsáveis técnicas:</p>
+                    <p><strong>Caroline Castro</strong>, formada em Administração em 2009 e em Engenharia Civil em 2019, com experiência e cursos voltados para Administração Pública, Licitações, Orçamentos e Gestão de Equipe.</p>
+                    <p><strong>Iolanda Moitinho</strong>, formada em Arquitetura e Urbanismo em 2016, com experiência em Modelagem e Gerenciamento BIM, Elaboração de Projetos, Levantamentos Cadastrais e Arquitetônicos. É especialista em Projetos Arquitetônicos, Institucionais, e possui Pós-Graduação em Projetos de Interiores, Acústica e Luminotécnica.</p>
                 </div>
                 <div class="about-image">
                     <img src="./img/projetos/cref12/capa.webp" alt="Equipe Recôncavo">
@@ -130,18 +194,19 @@
 
     <section class="about-differentials">
         <div class="container">
-          <h2>Diferenciais Competitivos</h2>
-          <ul class="lista-bolinhas">
-            <li>Equipe atualizada com as demandas do mercado.</li>
-            <li>Atuação integral em plataforma BIM, o que reduz erros de incompatibilidade, acelera o processo e melhora a precisão na quantificação de materiais.</li>
-            <li>Experiência com modelagem e cadastro via Nuvem de Pontos (5D), diferencial para reformas e patrimônio.</li>
-            <li>Expertise em conforto acústico, unindo técnica, estética e desempenho nos projetos arquitetônicos.</li>
-            <li>Amplo portfólio com projetos comerciais, corporativos, interiores, mobiliário, laboratórios, restaurantes, cozinhas, áreas de lazer e instituições educacionais.</li>
-            <li>Execução de projetos com integração interdisciplinar, favorecendo compatibilização e evitando retrabalhos na obra.</li>
-            <li>Profissional especialista em iluminação, com foco na valorização dos ambientes por meio da luz.</li>
-          </ul>
+            <h2>Diferenciais Competitivos</h2>
+            <ul class="lista-bolinhas">
+                <li>Equipe atualizada com as demandas do mercado.</li>
+                <li>Atuação integral em plataforma BIM, reduzindo erros de incompatibilidade, acelerando o processo e aumentando a precisão na quantificação de materiais.</li>
+                <li>Experiência com modelagem e cadastro via Nuvem de Pontos (5D), diferencial para reformas e patrimônio.</li>
+                <li>Expertise em conforto acústico, unindo técnica, estética e desempenho nos projetos arquitetônicos.</li>
+                <li>Portfólio amplo, com projetos comerciais, corporativos, de interiores, mobiliário, laboratórios, restaurantes, cozinhas, áreas de lazer e instituições educacionais.</li>
+                <li>Execução de projetos com integração interdisciplinar, favorecendo a compatibilização e evitando retrabalhos na obra.</li>
+                <li>Profissional especialista em iluminação, com foco na valorização dos ambientes por meio da luz.</li>
+            </ul>
         </div>
-      </section>
+    </section>
+
       
 
     <section class="achievements">
@@ -175,7 +240,7 @@
     <section class="cta">
         <div class="container">
             <h2>Vamos trabalhar juntos no seu próximo projeto?</h2>
-            <p>Entre em contato conosco para uma consulta inicial gratuita</p>
+            <p>Entre em contato conosco para uma consulta inicial</p>
             <a href="contato.html" class="btn">Fale conosco</a>
         </div>
     </section>
@@ -221,6 +286,8 @@
               </div>            
         </div>
     </footer>
+
+     
     <script src="./js/global.js"></script>
 </body>
 </html>

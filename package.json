@@ -1,5 +1,6 @@
 {
-  "dependencies": {
-    "sharp": "^0.34.1"
+  "dependencies": {    
+    "sharp": "^0.34.1",
+    "nodemailer": "^6.9.0"
   }
 }

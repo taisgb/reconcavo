@@ -156,23 +156,23 @@ document.addEventListener('DOMContentLoaded', function () {
     // Dados dos projetos (simulando um banco de dados)
     const projectsData = {
         projeto1: {
-            title: 'SESI',
-            category: 'Institucional/Administrativo, Educacional',
-            description: 'Serviços de arquitetura prestados sob demanda para o Sistema FIEPE, incluindo intervenções nas unidades do SESI Caruaru - Escola de Referência, SESI Goiana e na Casa da Indústria, com reforma do térreo ao 4º pavimento.',
+            title: 'Casa da Indústria – SESI PE',
+            category: 'Institucional/Administrativo',
+            description: 'Reforma completa do térreo ao 4º pavimento da sede da Casa da Indústria em Recife..',
             details: [
             { label: 'Cliente', value: 'SESI-PE / Sistema FIEPE' },
             { label: 'Localização', value: 'Pernambuco' },            
             { label: 'Ano', value: '2022' }            
             ],
             images: [
-                './img/projetos/sesi/sala_reuniao.webp',
+                './img/projetos/sesi/modal1.webp',
                 './img/projetos/sesi/modal2.webp',
                 './img/projetos/sesi/modal3.webp',
                 './img/projetos/sesi/modal4.webp'
             ]
         },
         projeto2: {
-            title: 'Prefeitura de Araraquara - SP',
+            title: 'Prefeitura de Araraquara - SP (Ginásio)',
             category: 'Esportes',
             description: 'Prestação de serviços técnicos especializados em arquitetura e engenharia para apoio à Secretaria Municipal de Desenvolvimento Urbano, com elaboração e revisão de projetos prediais e urbanos, incluindo equipamentos e infraestrutura externa do município.',
             details: [
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         projeto3: {
             title: 'SESC ES – Colatina',
-            category: 'Educacional, Esportes',
+            category: 'Esportes',
             description: 'Projeto de reforma e revitalização do Centro de Atividades do SESC Colatina, abrangendo fachada, escola, biblioteca, laboratórios, auditório, academia e áreas administrativas.',
             details: [
             { label: 'Cliente', value: 'SESC Espírito Santo' },
@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function () {
           },
           
           projeto9: {
-            title: 'Sisprev – Teófilo Otoni',
+            title: 'SisPrev – Teófilo Otoni',
             category: 'Institucional/Administrativo',
             description: 'Elaboração de projetos para adequação da sede da autarquia previdenciária municipal.',
             details: [
@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
           },
       
-          projeto11: {
+           projeto11: {
             title: 'Consultório Médico',
             category: 'Clínicas/Saúde',
             description: 'Projeto de interiores e layout funcional para consultório de atendimento clínico.',
@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 './img/projetos/consultorio/modal3.webp',
                 './img/projetos/consultorio/modal4.webp'
             ]
-          },
+          }, 
       
           projeto12: {
             title: 'Clínica de Psicologia',
@@ -422,8 +422,8 @@ document.addEventListener('DOMContentLoaded', function () {
           },
       
           projeto17: {
-            title: 'Prefeitura de Presidente Epitácio / SP',
-            category: 'Paisagismo',
+            title: 'Prefeitura de Presidente Epitácio/SP',
+            category: 'Paisagismo, Urbanismo',
             description: 'Projeto paisagístico com modelagem 3D para áreas públicas do município.',
             details: [
               { label: 'Cliente', value: 'Prefeitura Municipal de Presidente Epitácio' },
@@ -657,7 +657,94 @@ document.addEventListener('DOMContentLoaded', function () {
                 './img/projetos/secec/modal3.webp',
                 './img/projetos/secec/modal4.webp'
             ]
-          },
+          },          
+
+          projeto31: {
+            title: 'Prefeitura de Araraquara - SP (Palco)',
+            category: 'lazer',
+            description: 'Prestação de serviços técnicos especializados em arquitetura e engenharia para apoio à Secretaria Municipal de Desenvolvimento Urbano, com elaboração e revisão de projetos prediais e urbanos, incluindo equipamentos e infraestrutura externa do município.',
+            details: [
+            { label: 'Cliente', value: 'Prefeitura Municipal de Araraquara / SP' },
+            { label: 'Localização', value: 'Araraquara, SP' },            
+            { label: 'Ano', value: '2023' }           
+            ],
+            images: [
+                './img/projetos/araraquara_palco/modal3.webp',
+                './img/projetos/araraquara_palco/modal2.webp',
+                './img/projetos/araraquara_palco/modal1.webp',
+                './img/projetos/araraquara_palco/modal4.webp'
+            ]
+        },
+
+        projeto32: {
+            title: 'SESI – Caruaru',
+            category: 'Institucional/Administrativo, Educacional',
+            description: 'Intervenções na unidade SESI Caruaru - Escola de Referência, com adequações de espaços escolares e administrativos.',
+            details: [
+            { label: 'Cliente', value: 'SESI-PE / Sistema FIEPE' },
+            { label: 'Localização', value: 'Pernambuco' },            
+            { label: 'Ano', value: '2022' }            
+            ],
+            images: [
+                './img/projetos/sesi_caruaru/modal1.webp',
+                './img/projetos/sesi_caruaru/modal2.webp',
+                './img/projetos/sesi_caruaru/modal3.webp',
+                './img/projetos/sesi_caruaru/modal4.webp'
+            ]
+        },
+
+        projeto33: {
+          title: 'SESI – Goiana',
+          category: 'Educacional',
+          description: 'Serviços de reforma e modernização na unidade do SESI Goiana.',
+          details: [
+              { label: 'Cliente', value: 'SESI-GO / Sistema FIEPE' },
+              { label: 'Localização', value: 'Goiana, GO' },            
+              { label: 'Ano', value: '2022' }            
+          ],
+          images: [
+              './img/projetos/sesi_goiania/modal1.webp',
+              './img/projetos/sesi_goiania/modal2.webp',
+              './img/projetos/sesi_goiania/modal3.webp',
+              './img/projetos/sesi_goiania/modal4.webp'
+          ]
+      },
+
+        projeto34: {
+        title: 'SESC Colatina – Educacional',
+        category: 'Educacional',
+        description: 'Projeto de reforma de biblioteca, laboratórios e ambientes escolares no SESC Colatina.',
+        details: [
+            { label: 'Cliente', value: 'SESC Espírito Santo' },
+            { label: 'Localização', value: 'Colatina, ES' },            
+            { label: 'Ano', value: '2023' }           
+        ],
+        images: [
+            './img/projetos/sesc_colatina_educacional/modal1.webp',
+            './img/projetos/sesc_colatina_educacional/modal2.webp',
+            './img/projetos/sesc_colatina_educacional/modal3.webp',
+            './img/projetos/sesc_colatina_educacional/modal4.webp'
+        ]
+      },
+
+      projeto36: {
+        title: 'SESI – Gama',
+        category: 'Educacional',
+        description: 'Projeto de fachada para a unidade SESI localizada em Gama, Distrito Federal.',
+        details: [
+          { label: 'Cliente', value: 'SESI-DF' },
+          { label: 'Localização', value: 'Gama, DF' },
+          { label: 'Ano', value: '2023' }
+        ],
+        images: [
+          './img/projetos/sesi_gama/modal1.webp',
+          './img/projetos/sesi_gama/modal2.webp'          
+        ]
+      },
+      
+
+
+
 
     };
 
